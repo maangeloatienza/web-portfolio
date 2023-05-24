@@ -1,0 +1,42 @@
+/* Font color */
+.text__color--primary {
+  color: var(--main-color);
+}
+
+.text__color--secondary {
+  color: var(--secondary-color);
+}
+
+.text__color--tersiary {
+  color: var(--tersiary-color);
+}
+
+.text__color--accent {
+  color: var(--accent-color);
+}
+
+.text__color--white {
+  color : var(--white);
+}
+
+
+/* Font weight */
+
+.text--bolder {
+  font-weight: bolder;
+}
+
+.text--light {
+  font-weight: light;
+}
+
+
+/* Font case  */
+
+.text--uppercase {
+  text-transform: uppercase;
+}
+
+.text--lowercase {
+  text-transform: lowercase;
+}
