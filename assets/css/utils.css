@@ -1,14 +1,12 @@
 .container__width {
   margin: 0 auto;
-  width: var(--lg-width);
 }
 
 .text--center {
   text-align: center;
 }
 
-.hr-50 {
-  width: 50%;
+.hr-accent {
   margin: 30px auto 10px auto;
   color: var(--accent-color);
 }

@@ -71,10 +71,6 @@ a {
   font-size: 10px;
 }
 
-.hero__text--lead {
-  line-height: 1px;
-}
-
 .hero__text--description {
 
 }
@@ -137,25 +133,15 @@ a {
 /* Working Experience */
 #working-experience {
   display: grid;
+  transition: 2s;
 }
 
-#personal-information {
-  line-height: 5px;
-}
+
 
 .working-experience__content {
   display: grid;
 }
 
-.working-experience__date {
-  grid-column: 1/3;
-  font-size: 14px;
-}
-
-.working-experience__description {
-  grid-column: 3/7;
-
-}
 
 .working-experience__description > div {
   line-height: 2px;
@@ -280,14 +266,17 @@ footer > .copyright {
   padding-bottom: 20px;
 }
 
-.footer__icons nav a {
+.footer__socials nav a {
   padding-left: 20px;
 }
 
 
 /* Media Queries */
 
-@media only screen and (min-width:901px) {
+@media only screen and (min-width:1320px) {
+  .container__width {
+    width: var(--lg-width);
+  }
 
   .navigation__head {
     margin-bottom:50px;
@@ -317,8 +306,24 @@ footer > .copyright {
 
   #working-experience {
     grid-template-columns: 1fr 2fr;
+    padding: 30px 0;
+    gap: 100px;
   }
 
+  .working-experience__date {
+    grid-column: 1/3;
+    font-size: 14px;
+  }
+  
+  .working-experience__description {
+    grid-column: 3/7;
+  
+  }
+
+  #personal-information {
+    line-height: 5px;
+  }
+  
   .bootcamp--card {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -336,20 +341,134 @@ footer > .copyright {
 
   }
 
+  .working-experience__content {
+    grid-template-columns: repeat(6,1fr);
+  }
+
+  .hr-accent {
+    width: 50%;
+  }
+  
+}
+
+@media (min-width:901px) and (max-width:1319px) {
+  .container__width {
+    width: 80%;
+  }
+  
+  .hr-accent {
+    width: 50%;
+  }
+
+  .hero__cta {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navigation__head {
+    margin-bottom:50px;
+  }
+
+  .navigation__head a:nth-child(1) {
+    display:flex;
+    justify-content: flex-start;
+    flex: 4;
+  }
+  
+  .navigation__head a:nth-child(2),
+  .navigation__head a:nth-child(3),
+  .navigation__head a:nth-child(4) {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px;
+  }
+
+  .hero--container {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .hero__text--lead {
+    line-height: 50px;
+  }
+
   #working-experience {
+    grid-template-columns: 1fr 2fr;
     padding: 30px 0;
     gap: 100px;
+  }
+
+  .working-experience__date {
+    grid-column: 1/3;
+    font-size: 14px;
+  }
+  
+  .working-experience__description {
+    grid-column: 3/7;
+  
+  }
+
+  .bootcamp--card {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .bootcamp__video {
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+  }
+
+  .hero__image--container {
+    width: 100%;
+    height: 550px;
+
+  }
+
+  #personal-information {
+
   }
 
   .working-experience__content {
     grid-template-columns: repeat(6,1fr);
   }
-  
 }
 
-@media only screen and (max-width:480px) {
+
+@media (min-width: 601px) and (max-width:900px) {
   .container__width {
-    width: 100%;
+    width: 90%;
+  }
+
+  .hr-accent {
+    width: 70%;
+  }
+
+  .hero__cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #working-experience{
+    padding: 40px 0;
+  }
+  
+  .working-experience__container {
+    margin-top: 20px;
+  }
+
+  #bootcamp {
+    padding: 40px 0;
+  }
+}
+
+@media only screen and (max-width:600px) {
+  .container__width {
+    width: 95%;
+  }
+
+  .hr-accent {
+    width: 80%;
   }
   
   .navigation__head {
@@ -390,6 +509,25 @@ footer > .copyright {
     display:none;
   }
 
+  #working-experience {
+    grid-template-columns: 1fr;
+    padding: 30px 0;
+    gap: 10px;
+  }
+
+  .working-experience__description {
+    grid-template-column: 1fr;
+    margin-bottom: 20px;
+  }
+
+  .working-experience__container {
+    margin-top: 20px;
+  }
+
+  #personal-information {
+    display:block;
+  }
+
   .bootcamp--card > .card__container,
   .bootcamp__video
   {
@@ -404,7 +542,10 @@ footer > .copyright {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
   }
 
+  .footer__socials {
+    margin-bottom: 20px;
+  }
 }
