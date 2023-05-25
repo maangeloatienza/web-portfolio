@@ -1,14 +1,19 @@
 :root {
-  --main-color: rgb(15 23 42/1);;
-  --secondary-color: #94A3B8;
-  --tersiary-color: #9DB2BF;
-  --accent-color: #DDE6ED;
+  /* --main-color: rgb(15 23 42/1); */
+  --main-color: #06260F;
+  /* --secondary-color: #94A3B8; */
+  --secondary-color: #4D105E;
+  /* --tersiary-color: #9DB2BF; */
+  --tersiary-color: #5E1021;
+  /* --accent-color: #DDE6ED; */
+  --accent-color: #5E1021;
   --white: #FFFFFF;
   --lg-width: 1320px;
   --md-width: 900px;
   --sm-width: 600px;
 
-  --scheme-gradient: radial-gradient(circle, rgba(82,109,130,1) 14%, rgba(15,23,42,1) 50%);
+  /* --scheme-gradient: radial-gradient(circle, rgba(82,109,130,1) 14%, rgba(15,23,42,1) 50%); */
+  --scheme-gradient: radial-gradient(circle, rgba(83,114,92,1) 14%, rgba(6,38,15,1) 50%);
 }
 
 body {
@@ -323,7 +328,7 @@ footer > .copyright {
   #personal-information {
     line-height: 5px;
   }
-  
+
   .bootcamp--card {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
