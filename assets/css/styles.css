@@ -16,9 +16,10 @@ body {
   padding: 0;
   background-color: var(--main-color);
   font-family: Verdana, sans-serif;
-  height: 100vh;
-  width: 100vw;
+  /* height: 100dvh;
+  width: 100dvw; */
   color: var(--white);
+  scroll-behavior: smooth;
 }
 
 main {
@@ -185,7 +186,7 @@ a {
 
 #bootcamp {
   /* padding: 50px 0; */
- 
+  transition: 2s;
 }
 
 .bootcamp--card {
@@ -195,6 +196,10 @@ a {
 
 .bootcamp--card > .card__container {
   flex: 1;
+}
+
+.bootcamp__title {
+  transition: 2s;
 }
 
 .bootcamp--card > .card__container,
