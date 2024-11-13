@@ -137,23 +137,23 @@
     </section>
 
     <hr class="hr-accent">
-    <section class="">
+    <section class="" id="web-development-bootcamp">
       <div class="container__width" id="bootcamp">
         <h2 class="text__color--white bootcamp__title text--center">Web Development Boot Camp</h2>
 
-        <!-- <div class="hidden text__color--accent bootcamp--card">
+        <div class="text__color--accent bootcamp--card">
         
           <div class="bg--primary card__container">
             <h3 class="text--uppercase  text--center">frontend bootcamp</h3>
             <div>
               <div class="card__curriculum">
-                <button class="text--bolder card__tabs--button" id="frontend-description-tab">Description</button>
-                <p id="frontend-description-items">Helps you out in building the fundamentals in Web Development. During Boot camp you will have various projects that can be added to your portfolio.</p>
+                <button class="text--bolder card__tabs--button" id="frontend-description-tab" data-target-id="frontend-description-items">Description</button>
+                <p id="frontend-description-items" class="card__tabs--content hidden" data-open-tab="false">Helps you out in building the fundamentals in Web Development. During Boot camp you will have various projects that can be added to your portfolio.</p>
                 
               </div>
               <div class="card__description">
-                <button class="text--bolder card__tabs--button" id="frontend-curriculum-tab">Curriculum</button>
-                <ol id="frontend-curriculum-items">
+                <button class="text--bolder card__tabs--button" data-target-id="frontend-curriculum-items" id="frontend-curriculum-tab">Curriculum</button>
+                <ol id="frontend-curriculum-items" class="card__tabs--content hidden" data-open-tab="false">
                   <li>Intro to Web Development</li>
                   <li>HTML and CSS Fundamentals</li>
                   <li>Client Side Programming</li>
@@ -170,12 +170,12 @@
             <h3 class="text--uppercase text--center">backend bootcamp</h3>
             <div>
               <div class="card__description">
-                <button class="text--bolder card__tabs--button" id="backend-description-tab">Description</button>
-                <p id="backend-description-items">Being fundamentally equipped on how things work on the front-end side, the backend development bootcamp will help you out to give life to those business logics you have in mind or give life to your projects with data storing and manipulation through backend.</p>
+                <button class="text--bolder card__tabs--button" id="backend-description-tab" data-target-id="backend-description-items" >Description</button>
+                <p id="backend-description-items" class="card__tabs--content hidden" data-open-tab="false">Being fundamentally equipped on how things work on the front-end side, the backend development bootcamp will help you out to give life to those business logics you have in mind or give life to your projects with data storing and manipulation through backend.</p>
               </div>
               <div class="card__curriculum">
-                <button class="text--bolder card__tabs--button" id="backend-curriculum-tab">Curriculum</button>
-                <ol id="backend-curriculum-items">
+                <button class="text--bolder card__tabs--button" data-target-id="backend-curriculum-items"  id="backend-curriculum-tab">Curriculum</button>
+                <ol id="backend-curriculum-items" class="card__tabs--content hidden" data-open-tab="false">
                   <li>Database</li>
                   <li>NodeJS</li>
                   <li>ExpressJS</li>
@@ -187,7 +187,7 @@
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
          <!-- video -->
          <div class="hidden bootcamp__video bg--primary">
           <iframe width="100%" height="315" src="https://www.youtube.com/embed/hndY5Pz9rCk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

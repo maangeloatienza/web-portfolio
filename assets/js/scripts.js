@@ -1,5 +1,5 @@
 (function(){
-  // bootcampAccordion();
+  bootcampAccordion();
   scrollAnimation();
 })();
 
@@ -8,7 +8,7 @@ function scrollAnimation() {
 
     const observer = new IntersectionObserver((entries)=> {
       entries.forEach((entry)=> {
-        console.log(entry.isIntersecting)
+        
         if(entry.isIntersecting) {
           entry.target.classList.add('show')
           entry.target.classList.remove('hidden')
@@ -28,38 +28,31 @@ function scrollAnimation() {
 
 
 function bootcampAccordion(){
-  let feDescriptionFlag = true;
-  let feCurriculumFlag = false;
-  let beDescriptionFlag = true;
-  let beCurriculumFlag = false;
+  const cardTabsBtn = document.querySelectorAll(".card__tabs--button")
 
-  let descriptionTabFE = document.getElementById("frontend-description-tab").addEventListener("click",function(){
-    feDescriptionFlag = !feDescriptionFlag;
-    descriptionItemsFE.classList.add("animate-transition");
-    descriptionItemsFE.style.display = feDescriptionFlag?"block":"none";
-  });
-  let curriculumTabFE = document.getElementById("frontend-curriculum-tab").addEventListener("click",function(){
-    feCurriculumFlag = !feCurriculumFlag;
-    curriculumItemsFE.classList.add("animate-transition");
-    curriculumItemsFE.style.display = feCurriculumFlag?"block":"none";
-  });
-  let descriptionTabBE = document.getElementById("backend-description-tab").addEventListener("click",function(){
-    beDescriptionFlag = !beDescriptionFlag;
-    descriptionItemsBE.classList.add("animate-transition");
-    descriptionItemsBE.style.display = beDescriptionFlag?"block":"none"
-  });
-  let curriculumTabBE = document.getElementById("backend-curriculum-tab").addEventListener("click",function(){
-    beCurriculumFlag = !beCurriculumFlag;
-    curriculumItemsBE.classList.add("animate-transition");
-    curriculumItemsBE.style.display = beCurriculumFlag?"block":"none"
-  });
+  function toggleTab({target,isOpen}){
+    if(isOpen === 'true'){
+      target.classList.remove('hidden')
+      target.classList.add('show')
+    } else {
+      target.classList.remove('show')
+      target.classList.add('hidden')
+    }
+  }
 
+  cardTabsBtn.forEach(item=>{
+    let targetId = item.dataset.targetId
+    let currentItem = document.getElementById(targetId)
+    
+    item.addEventListener('click',()=>{
+      currentItem.dataset.openTab = currentItem.dataset.openTab === 'true'? 'false' : 'true'
 
-  let descriptionItemsFE = document.getElementById("frontend-description-items");
-  let curriculumItemsFE = document.getElementById("frontend-curriculum-items");
+      toggleTab({
+        target: currentItem,
+        isOpen: currentItem.dataset.openTab
+      })
 
-
-  let descriptionItemsBE = document.getElementById("backend-description-items");
-  let curriculumItemsBE = document.getElementById("backend-curriculum-items");
+    })
+  })
 
 }

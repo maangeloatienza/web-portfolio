@@ -42,6 +42,14 @@ a {
   color:inherit;
 }
 
+/* HIDE ITEM */
+.hidden {
+  display:none;
+}
+
+.show {
+  display:block;
+}
 
 /* NAVIGATION */
 
@@ -65,7 +73,7 @@ a {
 .hero--container {
   display: grid;
   gap: 20px;
-  transition: 2s;
+  transition: 0.5s;
 }
 
 .hero__text {
@@ -142,7 +150,11 @@ a {
 /* Working Experience */
 #working-experience {
   display: grid;
-  transition: 2s;
+  transition: 0.5s;
+}
+
+#web-development-bootcamp {
+  transition: 0.5s;
 }
 
 
@@ -186,7 +198,11 @@ a {
 
 #bootcamp {
   /* padding: 50px 0; */
-  transition: 2s;
+  transition: 0.5s;
+}
+
+.card__container {
+  transition: 0.5s;
 }
 
 .bootcamp--card {
@@ -199,14 +215,14 @@ a {
 }
 
 .bootcamp__title {
-  transition: 2s;
+  transition: 0.5s;
 }
 
 .bootcamp--card > .card__container,
 .bootcamp__video
 {
   padding: 20px 0px;
-  transition: 2s;
+  transition: 0.5s;
 }
 
 .bootcamp--card button {
@@ -232,12 +248,6 @@ a {
   color: var(--white);
   cursor: pointer;
 }
-
-#backend-curriculum-items,
-#frontend-curriculum-items {
-  display:none;
-}
-
 
 
 #backend-description-tab,
@@ -528,7 +538,7 @@ footer > .copyright {
   }
 
   .working-experience__description {
-    grid-template-column: 1fr;
+    grid-template-columns: 1fr;
     margin-bottom: 20px;
   }
 
